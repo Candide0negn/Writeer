@@ -1,70 +1,189 @@
-# Getting Started with Create React App
+# AI Writing Tutor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Introduction](#introduction)
+- [Features](#features)
+- [Demo](#demo)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### `npm start`
+## Introduction
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**AI Writing Tutor** is a user-friendly web application designed for individuals who aspire to enhance their writing skills using Artificial Intelligence. Whether you're a student, professional, or an enthusiast looking to improve your craft, this app provides a seamless interface to interact with AI-driven writing coaches inspired by renowned literary figures.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Interactive Chat Interface:** Engage in real-time conversations with the AI to receive personalized writing guidance.
+- **Predefined Prompts:** Start your learning journey quickly with common prompts tailored to different writing aspects.
+- **Custom Prompts:** Input your own queries and receive targeted feedback and suggestions.
+- **Attachment Support:** Upload files and images to provide context or examples for the AI to assist you better.
+- **Chat History Management:** Save, search, and manage your past conversations for easy reference.
+- **Responsive Design:** Enjoy a consistent experience across desktops, tablets, and mobile devices.
+- **Accessibility Optimized:** Built with accessibility in mind to ensure an inclusive experience for all users.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+![AI Writing Tutor Screenshot](path-to-your-screenshot.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*Illustration of the AI Writing Tutor interface.*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend:**
+  - [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
+  - [React Markdown](https://github.com/remarkjs/react-markdown) - Render Markdown content.
+  - [Prism Syntax Highlighter](https://prismjs.com/) - Syntax highlighting for code snippets.
+  - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) - Styling with modern design principles.
 
-### `npm run eject`
+- **AI Integration:**
+  - [Google Generative AI SDK](https://developers.google.com/generative-ai) - Powering the AI-driven writing assistance.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Other Tools:**
+  - [ESLint](https://eslint.org/) - Code linting to maintain code quality.
+  - [Webpack](https://webpack.js.org/) - Module bundler for JavaScript applications.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Follow these steps to set up the project locally:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
 
-## Learn More
+- [Node.js](https://nodejs.org/) (v14 or later)
+- [npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Steps
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Clone the Repository**
 
-### Code Splitting
+   ```bash
+   git clone https://github.com/yourusername/ai-writing-tutor.git
+   cd ai-writing-tutor
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install Dependencies**
 
-### Analyzing the Bundle Size
+   Using npm:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm install
+   ```
 
-### Making a Progressive Web App
+   Or using Yarn:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   yarn install
+   ```
 
-### Advanced Configuration
+3. **Configure Environment Variables**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   Create a `.env` file in the root directory and add the following:
 
-### Deployment
+   ```env
+   REACT_APP_GEMINI_API=your_google_generative_ai_api_key
+   REACT_APP_IMGUR_CLIENT_ID=your_imgur_client_id
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   - **REACT_APP_GEMINI_API:** Your Google Generative AI API key.
+   - **REACT_APP_IMGUR_CLIENT_ID:** Your Imgur Client ID for image uploads.
 
-### `npm run build` fails to minify
+4. **Start the Development Server**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   Using npm:
+
+   ```bash
+   npm start
+   ```
+
+   Or using Yarn:
+
+   ```bash
+   yarn start
+   ```
+
+   The app will be available at `http://localhost:3000`.
+
+## Usage
+
+1. **Launch the App**
+
+   Open your browser and navigate to `http://localhost:3000`.
+
+2. **Start a New Chat**
+
+   - Click on the **New Chat** button in the sidebar to initiate a new conversation.
+   - Alternatively, use one of the predefined prompts to get started quickly.
+
+3. **Interact with the AI**
+
+   - Type your questions or prompts in the input area.
+   - Attach files or images if you want the AI to consider specific content.
+   - Press **Enter** or click the **Send** button to submit your message.
+
+4. **Manage Chat History**
+
+   - View all your saved chats in the right sidebar.
+   - Use the search bar to find specific conversations.
+   - Click on a chat to revisit it or delete unwanted chats using the **Delete** button.
+
+## Contributing
+
+Contributions are welcome! Follow these steps to contribute to the project:
+
+1. **Fork the Repository**
+
+   Click the **Fork** button at the top right corner of the repository page.
+
+2. **Clone Your Fork**
+
+   ```bash
+   git clone https://github.com/yourusername/ai-writing-tutor.git
+   cd ai-writing-tutor
+   ```
+
+3. **Create a New Branch**
+
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+
+4. **Make Your Changes**
+
+   Implement your feature or fix bugs.
+
+5. **Commit Your Changes**
+
+   ```bash
+   git commit -m "Add your descriptive commit message"
+   ```
+
+6. **Push to Your Fork**
+
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+
+7. **Create a Pull Request**
+
+   Go to the original repository and create a pull request from your fork.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and distribute this software as per the license terms.
+
+## Contact
+
+If you have any questions, suggestions, or feedback, feel free to reach out:
+
+- **Email:** chrismloki@gmail.com
+- **GitHub:** Candide0negn
+
+---
+
+*Happy Writing! ✍️*
